@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>สื่อการเรียนรู้โต้ตอบ: คำราชาศัพท์ ม.2 (ฉบับการ์ตูนไทยสดใส)</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Mali (สำหรับหัวข้อการ์ตูน) & Kanit / Prompt -->
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&family=Mali:wght@400;600;700&family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'thai-gold': '#f59e0b',
+                        'thai-gold-light': '#fef3c7',
+                        'thai-teal': '#0d9488',
+                        'thai-teal-light': '#ccfbf1',
+                        'thai-pink': '#f43f5e',
+                        'thai-pink-light': '#ffe4e6',
+                        'thai-purple': '#8b5cf6',
+                        'thai-purple-light': '#ede9fe',
+                        'thai-cream': '#fffbeb',
+                        'thai-wood': '#fef3c7'
+                    },
+                    fontFamily: {
+                        'mali': ['Mali', 'cursive'],
+                        'kanit': ['Kanit', 'sans-serif'],
+                        'prompt': ['Prompt', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Prompt', sans-serif;
+            background: linear-gradient(135deg, #fff7ed 0%, #fef3c7 35%, #e0f2fe 100%);
+            min-height: 100vh;
+            background-attachment: fixed;
+        }
+
+        .font-mali {
+            font-family: 'Mali', cursive;
+        }
+
+        /* Custom Soft Pastel Sliders */
+        input[type=range] {
+            -webkit-appearance: none;
+            width: 100%;
+            background: #cbd5e1;
+            height: 14px;
+            border-radius: 999px;
+            outline: none;
+            border: 2px solid #ffffff;
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        input[type=range]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #f59e0b, #d97706);
+            border: 3px solid #ffffff;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(217, 119, 6, 0.4);
+            transition: transform 0.2s ease, background 0.2s ease;
+        }
+
+        input[type=range]::-webkit-slider-thumb:hover {
+            transform: scale(1.2) rotate(5deg);
+        }
+
+        /* Category slider thumb variant */
+        #slider-category::-webkit-slider-thumb {
+            background: linear-gradient(135deg, #0d9488, #0f766e);
+            box-shadow: 0 4px 10px rgba(15, 118, 110, 0.4);
+        }
+
+        /* Pastel Cute Card */
+        .cute-card {
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(12px);
+            border: 3px solid #ffffff;
+            box-shadow: 0 12px 30px -8px rgba(245, 158, 11, 0.12), 0 4px 12px rgba(0, 0, 0, 0.03);
+            border-radius: 1.75rem;
+        }
+
+        /* Floating Thai Pattern Animation */
+        @keyframes float-gentle {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-8px) rotate(2deg); }
+        }
+
+        .animate-float {
+            animation: float-gentle 4s ease-in-out infinite;
+        }
+
+        @keyframes bounce-subtle {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.03); }
+        }
+
+        .pulse-card {
+            animation: bounce-subtle 0.35s ease-out;
+        }
+
+        /* Speech Bubble Tail */
+        .speech-bubble::after {
+            content: '';
+            position: absolute;
+            bottom: -12px;
+            left: 28px;
+            border-width: 12px 12px 0;
+            border-style: solid;
+            border-color: #ffffff transparent;
+            display: block;
+            width: 0;
+        }
+
+        /* Thai Traditional Line Motif Divider */
+        .thai-pattern-bg {
+            background-image: radial-gradient(#f59e0b 0.75px, transparent 0.75px), radial-gradient(#f59e0b 0.75px, #fff7ed 0.75px);
+            background-size: 30px 30px;
+            background-position: 0 0, 15px 15px;
+            opacity: 0.15;
+        }
+    </style>
+</head>
+<body class="text-slate-800 pb-16 relative overflow-x-hidden">
+
+    <!-- Decorative Background Motifs -->
+    <div class="fixed inset-0 thai-pattern-bg pointer-events-none -z-10"></div>
+    <div class="fixed -top-20 -left-20 w-72 h-72 bg-amber-200/40 rounded-full blur-3xl pointer-events-none -z-10"></div>
+    <div class="fixed top-1/2 -right-20 w-80 h-80 bg-teal-200/40 rounded-full blur-3xl pointer-events-none -z-10"></div>
+
+    <!-- Header Banner -->
+    <header class="max-w-6xl mx-auto px-4 pt-6 pb-2">
+        <div class="cute-card p-6 bg-gradient-to-r from-amber-400 via-orange-300 to-teal-300 relative overflow-hidden border-4 border-white shadow-xl">
+            <!-- Sparkle Deco -->
+            <div class="absolute top-2 right-4 text-white/80 text-2xl animate-pulse"><i class="fa-solid fa-sparkles"></i></div>
+            <div class="absolute bottom-2 left-10 text-amber-600/30 text-4xl"><i class="fa-solid fa-sun-plant-wilt"></i></div>
+
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6 relative z-10">
+                <!-- Title & Cute Thai Avatar -->
+                <div class="flex items-center space-x-4">
+                    <div class="w-16 h-16 md:w-20 md:h-20 bg-white rounded-3xl shadow-lg border-4 border-amber-200 flex items-center justify-center shrink-0 animate-float">
+                        <!-- Cute Thai Crown Avatar SVG -->
+                        <svg class="w-12 h-12 text-amber-500" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M32 6L40 22L56 16L48 38H16L8 16L24 22L32 6Z" fill="#F59E0B" stroke="#D97706" stroke-width="3" stroke-linejoin="round"/>
+                            <circle cx="32" cy="12" r="3" fill="#EF4444"/>
+                            <circle cx="14" cy="20" r="2.5" fill="#3B82F6"/>
+                            <circle cx="50" cy="20" r="2.5" fill="#3B82F6"/>
+                            <path d="M16 42H48V50C48 53.3137 45.3137 56 42 56H22C18.6863 56 16 53.3137 16 50V42Z" fill="#FEF3C7" stroke="#D97706" stroke-width="3"/>
+                            <circle cx="32" cy="48" r="3" fill="#10B981"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <div class="inline-flex items-center gap-2 bg-white/80 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-amber-800 shadow-sm mb-1">
+                            <span>✨ สื่อเรียนรู้โต้ตอบดิจิทัล</span>
+                            <span class="bg-amber-400 text-slate-900 px-2 py-0.5 rounded-full text-[10px]">ม.2</span>
+                        </div>
+                        <h1 class="text-2xl md:text-3xl font-bold font-mali text-slate-900 tracking-wide">
+                            เรียนรู้คำราชาศัพท์ <span class="text-amber-700">หรรษา</span>
+                        </h1>
+                        <p class="text-slate-700 text-xs md:text-sm font-medium mt-0.5">
+                            สังเกตและวิเคราะห์ระดับภาษาด้วยเครื่องมือโต้ตอบสไตล์การ์ตูนไทยสดใส 🌸
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Navigation Tabs -->
+                <div class="flex bg-white/70 backdrop-blur-md p-1.5 rounded-2xl border-2 border-amber-200/60 shadow-inner">
+                    <button id="btn-tab-learn" onclick="switchTab('learn')" class="px-5 py-2.5 rounded-xl bg-amber-500 text-white font-bold font-mali shadow-md transition-all duration-200 flex items-center gap-2">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                        <span>ห้องเรียนโต้ตอบ</span>
+                    </button>
+                    <button id="btn-tab-quiz" onclick="switchTab('quiz')" class="px-5 py-2.5 rounded-xl text-slate-700 font-bold font-mali hover:bg-white/60 transition-all duration-200 flex items-center gap-2">
+                        <i class="fa-solid fa-gamepad"></i>
+                        <span>แบบทดสอบ 5 ข้อ</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="max-w-6xl mx-auto px-4 mt-4">
+
+        <!-- ================= SECTION 1: INTERACTIVE LEARNING LAB ================= -->
+        <div id="section-learn" class="space-y-6">
+
+            <!-- Objective Card -->
+            <div class="cute-card p-4 bg-teal-50/90 border-2 border-teal-200 flex items-center gap-3">
+                <div class="w-10 h-10 rounded-2xl bg-teal-500 text-white flex items-center justify-center text-lg shadow-md shrink-0">
+                    <i class="fa-solid fa-bullseye"></i>
+                </div>
+                <p class="text-xs md:text-sm text-teal-900 font-medium">
+                    <strong class="font-bold text-teal-950 font-mali">วัตถุประสงค์การเรียนรู้:</strong> 
+                    นักเรียนสามารถสังเกตความเปลี่ยนแปลง วิเคราะห์โครงสร้างการใช้คำนำหน้า (เช่น <span class="underline decoration-amber-400 font-bold">พระบรม / พระ / ทรง</span>) และจำแนกคำราชาศัพท์ตามระดับบุคคลได้อย่างถูกต้อง
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+
+                <!-- Left Column: Sliders & Mascot Assistant (5 Cols) -->
+                <div class="lg:col-span-5 space-y-6">
+
+                    <!-- Variable Slider 1 Card -->
+                    <div class="cute-card p-5 border-amber-200 relative">
+                        <div class="flex justify-between items-center mb-3">
+                            <label class="font-bold font-mali text-slate-800 text-sm md:text-base flex items-center gap-2">
+                                <span class="w-7 h-7 rounded-full bg-amber-400 text-slate-900 flex items-center justify-center text-xs font-bold">1</span>
+                                ตัวแปร 1: ระดับบุคคล / ลำดับชั้น
+                            </label>
+                            <span id="rank-badge" class="bg-amber-100 text-amber-800 border border-amber-300 text-xs font-bold px-3 py-1 rounded-full font-mali shadow-sm">
+                                ระดับ 1
+                            </span>
+                        </div>
+
+                        <input type="range" id="slider-rank" min="1" max="5" value="1" step="1" oninput="updateDashboard()">
+
+                        <!-- Ticks -->
+                        <div class="flex justify-between text-[11px] font-bold text-slate-500 mt-2 px-1">
+                            <span class="text-amber-700">กษัตริย์</span>
+                            <span>พระบรมวงศานุวงศ์</span>
+                            <span>พระอนุวงศ์</span>
+                            <span>พระสงฆ์</span>
+                            <span class="text-teal-700">สุภาพชน</span>
+                        </div>
+
+                        <!-- Current Rank Info Box -->
+                        <div id="rank-info-box" class="mt-4 p-3.5 bg-amber-50/80 rounded-2xl border-2 border-amber-200 flex items-center space-x-3 transition-all duration-300">
+                            <div id="rank-icon-bg" class="w-12 h-12 rounded-2xl bg-amber-500 text-white flex items-center justify-center text-xl shadow-md shrink-0">
+                                <i id="rank-icon" class="fa-solid fa-crown"></i>
+                            </div>
+                            <div>
+                                <h4 id="rank-title" class="font-bold text-amber-950 text-sm font-mali">1. พระมหากษัตริย์</h4>
+                                <p id="rank-desc" class="text-xs text-amber-800/90 mt-0.5">พระบาทสมเด็จพระเจ้าอยู่หัว (ใช้คำราชาศัพท์ระดับสูงสุด)</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Variable Slider 2 Card -->
+                    <div class="cute-card p-5 border-teal-200 relative">
+                        <div class="flex justify-between items-center mb-3">
+                            <label class="font-bold font-mali text-slate-800 text-sm md:text-base flex items-center gap-2">
+                                <span class="w-7 h-7 rounded-full bg-teal-500 text-white flex items-center justify-center text-xs font-bold">2</span>
+                                ตัวแปร 2: หมวดหมู่คำศัพท์
+                            </label>
+                            <span id="category-badge" class="bg-teal-100 text-teal-800 border border-teal-300 text-xs font-bold px-3 py-1 rounded-full font-mali shadow-sm">
+                                หมวด 1
+                            </span>
+                        </div>
+
+                        <input type="range" id="slider-category" min="1" max="5" value="1" step="1" oninput="updateDashboard()">
+
+                        <!-- Ticks -->
+                        <div class="flex justify-between text-[11px] font-bold text-slate-500 mt-2 px-1">
+                            <span>ร่างกาย</span>
+                            <span>เครื่องใช้</span>
+                            <span>กริยา</span>
+                            <span>เครือญาติ</span>
+                            <span>สรรพนาม</span>
+                        </div>
+
+                        <!-- Current Category Info Box -->
+                        <div id="cat-info-box" class="mt-4 p-3.5 bg-teal-50/80 rounded-2xl border-2 border-teal-200 flex items-center space-x-3 transition-all duration-300">
+                            <div id="cat-icon-bg" class="w-12 h-12 rounded-2xl bg-teal-600 text-white flex items-center justify-center text-xl shadow-md shrink-0">
+                                <i id="cat-icon" class="fa-solid fa-child"></i>
+                            </div>
+                            <div>
+                                <h4 id="cat-title" class="font-bold text-teal-950 text-sm font-mali">หมวด 1: ร่างกาย</h4>
+                                <p id="cat-desc" class="text-xs text-teal-800/90 mt-0.5">คำศัพท์อวัยวะและส่วนต่างๆ ของร่างกาย</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cute Thai Mascot Speech & Hint Box -->
+                    <div class="cute-card p-5 bg-gradient-to-br from-pink-50 to-purple-50 border-pink-200 relative overflow-hidden">
+                        <div class="flex items-start space-x-3">
+                            <!-- Mascot Avatar SVG (Nong Chuk / Thai Cartoon Boy) -->
+                            <div class="w-16 h-16 rounded-2xl bg-pink-200 border-2 border-pink-300 flex items-center justify-center shrink-0 shadow-md relative animate-float">
+                                <svg class="w-12 h-12" viewBox="0 0 64 64" fill="none">
+                                    <circle cx="32" cy="36" r="20" fill="#FDE047"/>
+                                    <!-- Thai Topknot Hair (จุก) -->
+                                    <path d="M32 8C28 8 28 16 32 16C36 16 36 8 32 8Z" fill="#78350F"/>
+                                    <circle cx="32" cy="12" r="3" fill="#F43F5E"/>
+                                    <circle cx="25" cy="34" r="2.5" fill="#1E293B"/>
+                                    <circle cx="39" cy="34" r="2.5" fill="#1E293B"/>
+                                    <!-- Cute Smile -->
+                                    <path d="M28 42C28 42 30 45 32 45C34 45 36 42 36 42" stroke="#1E293B" stroke-width="2" stroke-linecap="round"/>
+                                    <!-- Rosy Cheeks -->
+                                    <circle cx="22" cy="38" r="2" fill="#F43F5E" opacity="0.5"/>
+                                    <circle cx="42" cy="38" r="2" fill="#F43F5E" opacity="0.5"/>
+                                </svg>
+                            </div>
+
+                            <div class="space-y-1">
+                                <div class="flex items-center gap-2">
+                                    <span class="font-bold font-mali text-pink-900 text-sm">พี่จุกชวนสังเกต 💡</span>
+                                </div>
+                                <p id="mascot-hint-text" class="text-xs text-slate-700 leading-relaxed font-medium">
+                                    ลองเลื่อน Slider ดูนะ! จะสังเกตเห็นว่าระดับกษัตริย์จะนิยมใช้คำว่า "พระ" หรือ "พระบรม" นำหน้าเพื่อยกย่องความสำคัญครับ
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Right Column: Visual Gauge, Structure Breakdown & Table (7 Cols) -->
+                <div class="lg:col-span-7 space-y-6">
+
+                    <!-- Gauge of Formality & Main Vocab Card -->
+                    <div id="main-vocab-card" class="cute-card p-6 border-amber-300 relative transition-all duration-300 bg-white">
+                        
+                        <!-- Top Ribbon: Gauge of Formality -->
+                        <div class="mb-5 bg-slate-50 p-4 rounded-2xl border-2 border-slate-100">
+                            <div class="flex justify-between items-center mb-1.5">
+                                <span class="text-xs font-bold font-mali text-slate-700 flex items-center gap-1.5">
+                                    <i class="fa-solid fa-gauge-high text-amber-500"></i>
+                                    เกจวัดระดับความเป็นทางการ (Gauge of Formality)
+                                </span>
+                                <span id="gauge-percent-text" class="text-xs font-bold text-amber-700 bg-amber-100 px-2.5 py-0.5 rounded-full">100%</span>
+                            </div>
+                            <!-- Cute Animated Progress Bar -->
+                            <div class="w-full bg-slate-200 rounded-full h-4 overflow-hidden border border-white shadow-inner">
+                                <div id="gauge-bar" class="bg-gradient-to-r from-teal-400 via-amber-400 to-rose-500 h-full rounded-full transition-all duration-500 relative" style="width: 100%;">
+                                    <div class="absolute inset-0 bg-white/20 animate-pulse"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Main Word Display Box -->
+                        <div class="text-center my-2 p-6 bg-gradient-to-br from-amber-400 via-amber-500 to-orange-500 rounded-3xl text-white shadow-lg relative border-4 border-amber-200">
+                            <div class="text-amber-100 text-xs font-bold font-mali uppercase tracking-wider mb-1">
+                                <span id="target-concept-tag" class="bg-black/20 px-3 py-1 rounded-full border border-white/20">คำสามัญ: ศีรษะ (หัว)</span>
+                            </div>
+
+                            <div id="royal-word-text" class="text-3xl md:text-5xl font-bold font-mali text-white drop-shadow-md my-3">
+                                พระเศียร
+                            </div>
+
+                            <div id="phonetic-text" class="text-amber-100 text-xs md:text-sm font-medium bg-white/10 inline-block px-4 py-1 rounded-full backdrop-blur-md">
+                                [คำอ่าน: พระ - เสียร]
+                            </div>
+
+                            <!-- Audio Sound Button -->
+                            <div class="mt-4">
+                                <button onclick="speakWord()" class="inline-flex items-center gap-2 bg-white text-amber-900 font-bold font-mali text-xs px-4 py-2 rounded-full shadow-md hover:bg-amber-100 transition-all hover:scale-105 active:scale-95">
+                                    <i class="fa-solid fa-volume-high text-amber-600"></i> ฟังการอ่านออกเสียง
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- โครงสร้างและการแจกลูกคำ (Word Structure Analysis) -->
+                        <div class="mt-6 space-y-3">
+                            <h4 class="font-bold font-mali text-sm text-slate-800 flex items-center gap-2">
+                                <i class="fa-solid fa-cubes text-amber-500"></i> โครงสร้างและการแจกลูกคำ (Word Structure Analysis)
+                            </h4>
+
+                            <div class="grid grid-cols-3 gap-2 text-center">
+                                <div class="bg-amber-50 p-3 rounded-2xl border-2 border-amber-200">
+                                    <span class="text-[10px] font-bold text-amber-700 block">คำนำหน้า (Prefix)</span>
+                                    <span id="struct-prefix" class="font-bold font-mali text-amber-900 text-sm md:text-base">พระ</span>
+                                </div>
+                                <div class="bg-teal-50 p-3 rounded-2xl border-2 border-teal-200">
+                                    <span class="text-[10px] font-bold text-teal-700 block">คำหลัก (Core Word)</span>
+                                    <span id="struct-root" class="font-bold font-mali text-teal-900 text-sm md:text-base">เศียร</span>
+                                </div>
+                                <div class="bg-purple-50 p-3 rounded-2xl border-2 border-purple-200">
+                                    <span class="text-[10px] font-bold text-purple-700 block">ข้อสังเกตเฉพาะ</span>
+                                    <span id="struct-rule" class="font-bold font-mali text-purple-900 text-xs md:text-sm">คำนามราชาศัพท์</span>
+                                </div>
+                            </div>
+
+                            <!-- Sentence Example -->
+                            <div class="bg-slate-50 p-4 rounded-2xl border-2 border-slate-200/80">
+                                <div class="text-xs font-bold text-slate-700 mb-1 flex items-center gap-1.5 font-mali">
+                                    <i class="fa-solid fa-quote-left text-amber-500"></i> ตัวอย่างการประยุกต์ใช้ในประโยค:
+                                </div>
+                                <p id="sentence-example" class="text-xs md:text-sm text-slate-700 leading-relaxed font-medium">
+                                    "พระบาทสมเด็จพระเจ้าอยู่หัวทรงผงก **พระเศียร** ทักทายพสกนิกร"
+                                </p>
+                            </div>
+
+                            <!-- Special Thai Grammar Note Highlight -->
+                            <div class="p-3.5 rounded-2xl bg-amber-100/70 border-2 border-amber-300 text-xs text-amber-950 flex items-start space-x-2.5">
+                                <i class="fa-solid fa-star text-amber-600 text-base mt-0.5 shrink-0"></i>
+                                <div>
+                                    <strong class="font-bold font-mali text-amber-900 block mb-0.5">หลักวิเคราะห์สำคัญ ม.2:</strong>
+                                    <span id="analysis-note">คำว่า "พระเศียร" ใช้คำนำหน้า "พระ" กับคำนามบาลี/สันสกฤต เพื่อใช้เป็นนามราชาศัพท์</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Real-Time Comparison Table (5 Levels) -->
+                    <div class="cute-card p-5 border-slate-200">
+                        <h4 class="font-bold font-mali text-sm text-slate-800 mb-3 flex items-center justify-between">
+                            <span class="flex items-center gap-2">
+                                <i class="fa-solid fa-table-list text-teal-600"></i>
+                                ตารางเปรียบเทียบคำราชาศัพท์ 5 ระดับ (Real-Time)
+                            </span>
+                            <span class="text-[11px] bg-teal-100 text-teal-800 font-bold px-2.5 py-0.5 rounded-full">เปรียบเทียบตามหมวด</span>
+                        </h4>
+
+                        <div class="overflow-x-auto rounded-2xl border-2 border-slate-100">
+                            <table class="w-full text-left text-xs">
+                                <thead>
+                                    <tr class="bg-amber-100/80 text-amber-950 font-mali">
+                                        <th class="p-3 font-bold">ลำดับชั้น / ระดับบุคคล</th>
+                                        <th class="p-3 font-bold">คำศัพท์ที่ถูกต้อง</th>
+                                        <th class="p-3 font-bold">หลักวิเคราะห์</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="comparison-table-body" class="divide-y divide-slate-100 bg-white">
+                                    <!-- Dynamic Rows -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <!-- ================= SECTION 2: ASSESSMENT QUIZ ================= -->
+        <div id="section-quiz" class="hidden space-y-6">
+
+            <!-- Quiz Banner Card -->
+            <div class="cute-card p-6 bg-gradient-to-r from-purple-500 via-pink-500 to-amber-400 text-white border-4 border-white shadow-lg">
+                <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                    <div class="flex items-center space-x-4">
+                        <div class="w-14 h-14 rounded-2xl bg-white/20 backdrop-blur-md flex items-center justify-center text-2xl border border-white/30 shrink-0">
+                            <i class="fa-solid fa-trophy text-yellow-200"></i>
+                        </div>
+                        <div>
+                            <h2 class="text-xl md:text-2xl font-bold font-mali drop-shadow">แบบทดสอบประเมินผลคำราชาศัพท์ (5 ข้อ)</h2>
+                            <p class="text-xs md:text-sm text-pink-100 mt-0.5">ทดสอบทักษะการสังเกตและวิเคราะห์โครงสร้างคำราชาศัพท์ ม.2</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white/90 text-slate-800 px-6 py-2.5 rounded-2xl shadow-md text-center shrink-0 border-2 border-amber-200">
+                        <span class="text-[10px] font-bold uppercase tracking-wider text-slate-500 block">คะแนนของคุณ</span>
+                        <span id="score-display" class="text-2xl font-bold font-mali text-amber-600">0 / 5</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quiz Form -->
+            <form id="quiz-form" class="space-y-6">
+                <div id="questions-container" class="space-y-6">
+                    <!-- Dynamic Questions injected by JS -->
+                </div>
+
+                <!-- Submit & Reset Action Buttons -->
+                <div class="flex flex-col sm:flex-row gap-4 justify-end pt-2">
+                    <button type="button" onclick="resetQuiz()" class="px-6 py-3 rounded-2xl bg-white border-2 border-slate-300 text-slate-700 font-bold font-mali hover:bg-slate-50 transition-all text-sm shadow-sm flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-rotate-left"></i> ทำแบบทดสอบอีกครั้ง
+                    </button>
+                    <button type="button" onclick="submitQuiz()" class="px-8 py-3 rounded-2xl bg-gradient-to-r from-amber-500 to-orange-500 text-white font-bold font-mali shadow-lg hover:from-amber-600 hover:to-orange-600 transition-all text-sm flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-check-double"></i> ตรวจคำตอบและดูเฉลย
+                    </button>
+                </div>
+            </form>
+
+            <!-- Quiz Result Modal/Card -->
+            <div id="quiz-result-card" class="hidden cute-card p-6 border-4 border-amber-300 bg-amber-50/90 shadow-xl">
+                <div class="flex items-center space-x-4">
+                    <div id="result-icon-bg" class="w-16 h-16 rounded-2xl bg-amber-500 text-white flex items-center justify-center text-3xl shadow-lg shrink-0">
+                        <i id="result-icon" class="fa-solid fa-crown"></i>
+                    </div>
+                    <div>
+                        <h3 id="result-title" class="text-xl font-bold font-mali text-slate-900">เก่งมาก! ได้คะแนน 5/5</h3>
+                        <p id="result-feedback" class="text-xs md:text-sm text-slate-700 mt-1 leading-relaxed">
+                            นักเรียนมีความเข้าใจในหลักการสังเกตและวิเคราะห์คำราชาศัพท์เป็นอย่างดีเยี่ยม!
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="max-w-6xl mx-auto px-4 mt-12 text-center text-xs text-slate-500">
+        <p class="font-mali">🌸 สื่อการเรียนรู้ดิจิทัลโต้ตอบ วิชาภาษาไทย ชั้นมัธยมศึกษาปีที่ 2</p>
+        <p class="mt-1 text-[11px] text-slate-400">พัฒนาตามหลักสูตรแกนกลางการศึกษาขั้นพื้นฐาน (เน้นทักษะการสังเกตและวิเคราะห์ระดับภาษา)</p>
+    </footer>
+
+    <!-- JavaScript Application Data & Logic -->
+    <script>
+        // Database Matrix: 5 Ranks x 5 Categories
+        const rankData = {
+            1: { name: "1. พระมหากษัตริย์", short: "พระมหากษัตริย์", icon: "fa-crown", color: "bg-amber-500", desc: "พระบาทสมเด็จพระเจ้าอยู่หัว (ใช้ราชาศัพท์ระดับสูงสุด)", formality: 100 },
+            2: { name: "2. พระบรมวงศานุวงศ์", short: "พระบรมวงศานุวงศ์", icon: "fa-gem", color: "bg-purple-500", desc: "สมเด็จพระบรมราชินี / สมเด็จพระกนิษฐาธิราชเจ้าฯ / เจ้าฟ้าชั้นสูง", formality: 85 },
+            3: { name: "3. พระอนุวงศ์ (พระองค์เจ้า/หม่อมเจ้า)", short: "พระอนุวงศ์", icon: "fa-award", color: "bg-teal-500", desc: "พระองค์เจ้า และ หม่อมเจ้า", formality: 70 },
+            4: { name: "4. พระสงฆ์ทรงสมณศักดิ์", short: "พระภิกษุสงฆ์", icon: "fa-hands-praying", color: "bg-orange-600", desc: "สมเด็จพระสังฆราช และ พระสงฆ์", formality: 55 },
+            5: { name: "5. สุภาพชน / บุคคลทั่วไป", short: "สุภาพชน", icon: "fa-user", color: "bg-slate-600", desc: "ประชาชนทั่วไป (ใช้ภาษาระดับสุภาพ)", formality: 30 }
+        };
+
+        const categoryData = {
+            1: { name: "หมวด 1: ร่างกาย", icon: "fa-child", concept: "ศีรษะ (หัว)", desc: "คำศัพท์เกี่ยวกับอวัยวะและส่วนต่างๆ ของร่างกาย" },
+            2: { name: "หมวด 2: เครื่องใช้", icon: "fa-couch", concept: "เตียงนอน", desc: "คำศัพท์เกี่ยวกับเครื่องใช้และของใช้ส่วนตัว" },
+            3: { name: "หมวด 3: คำกริยา", icon: "fa-person-walking", concept: "กิน (รับประทาน)", desc: "คำศัพท์แสดงกริยาท่าทางและการกระทำ" },
+            4: { name: "หมวด 4: เครือญาติ", icon: "fa-people-roof", concept: "ปู่ / ตา", desc: "คำศัพท์เกี่ยวกับลำดับญาติและสายเลือด" },
+            5: { name: "หมวด 5: คำสรรพนาม", icon: "fa-comments", concept: "คำแทนตัวผู้พูด (ฉัน / ข้าพเจ้า)", desc: "คำบุรุษสรรพนามตามระดับชั้นบุคคล" }
+        };
+
+        const vocabMatrix = {
+            // Rank 1: กษัตริย์
+            1: {
+                1: { word: "พระเศียร", reading: "พระ - เสียร", prefix: "พระ", root: "เศียร", rule: "คำนามราชาศัพท์", sentence: "พระบาทสมเด็จพระเจ้าอยู่หัวทรงผงก **พระเศียร** ทักทายพสกนิกร", note: "หมวดร่างกายของกษัตริย์ใช้ 'พระ' นำหน้าคำนามบาลี/สันสกฤต", hint: "กษัตริย์ใช้ 'พระเศียร' โดยมี 'พระ' นำหน้าคำว่า เศียร ครับ" },
+                2: { word: "พระแท่นบรรทม", reading: "พระ - แท่น - บัน - ทม", prefix: "พระ", root: "แท่นบรรทม", rule: "คำนามราชาศัพท์", sentence: "พระองค์เสด็จขึ้น **พระแท่นบรรทม** ในเวลาเที่ยงคืน", note: "ใช้ 'พระแท่น' รวมกับ 'บรรทม' เป็นนามราชาศัพท์หมายถึง เตียงนอน", hint: "เตียงนอนของกษัตริย์เรียกว่า พระแท่นบรรทม ครับ" },
+                3: { word: "เสวย", reading: "สะ - เหวย", prefix: "-", root: "เสวย", rule: "ห้ามใช้ 'ทรง' ซ้อน", sentence: "พระบาทสมเด็จพระเจ้าอยู่หัว **เสวย** พระกระยาหารเช้า", note: "จำให้แม่น ม.2: คำว่า 'เสวย' เป็นกริยาราชาศัพท์แล้ว ห้ามใช้ 'ทรงเสวย' เด็ดขาด", hint: "ระวังนะ! 'เสวย' เป็นกริยาราชาศัพท์แล้ว ห้ามใส่ 'ทรง' ซ้อนข้างหน้าเด็ดขาด!" },
+                4: { word: "พระอัยกา / พระราชอัยกา", reading: "พระ - ไอ - ยะ - กา", prefix: "พระ / พระราช", root: "อัยกา", rule: "เครือญาติราชาศัพท์", sentence: "พระองค์ทรงกตัญญูต่อ **พระอัยกา**", note: "หมายถึง ปู่ หรือ ตา ของพระมหากษัตริย์", hint: "ปู่ หรือ ตา ของกษัตริย์เรียกว่า พระอัยกา หรือ พระราชอัยกา" },
+                5: { word: "ข้าพระพุทธเจ้า / ใต้ฝ่าละอองธุลีพระบาท", reading: "ข้า - พระ - พุด - ธะ - เจ้า", prefix: "สรรพนาม", root: "ชั้นสูงสุด", rule: "สรรพนามระดับสูงสุด", sentence: "**ข้าพระพุทธเจ้า** ขอถวายบังคม **ใต้ฝ่าละอองธุลีพระบาท**", note: "ใช้ ข้าพระพุทธเจ้า (แทนตัวผู้พูด) และ ใต้ฝ่าละอองธุลีพระบาท (พูดกับกษัตริย์)", hint: "เมื่อพูดกับกษัตริย์ ต้องใช้สรรพนามระดับสูงสุด คือ ข้าพระพุทธเจ้า ครับ" }
+            },
+            // Rank 2: พระบรมวงศานุวงศ์
+            2: {
+                1: { word: "พระเศียร", reading: "พระ - เสียร", prefix: "พระ", root: "เศียร", rule: "คำนามราชาศัพท์", sentence: "สมเด็จพระกนิษฐาธิราชเจ้าฯ ทรงเอียง **พระเศียร** รับการถวายความเคารพ", note: "พระบรมวงศานุวงศ์ชั้นสูงใช้ 'พระเศียร' เช่นเดียวกับพระมหากษัตริย์", hint: "เจ้านายชั้นสูงยังคงใช้ 'พระเศียร' เหมือนพระมหากษัตริย์ครับ" },
+                2: { word: "พระแท่นบรรทม", reading: "พระ - แท่น - บัน - ทม", prefix: "พระ", root: "แท่นบรรทม", rule: "คำนามราชาศัพท์", sentence: "สมเด็จพระบรมราชินีเสด็จประทับ ณ **พระแท่นบรรทม**", note: "สิ่งของเครื่องใช้ระดับพระบรมวงศานุวงศ์ยังใช้ 'พระแท่นบรรทม'", hint: "เตียงนอนของสมเด็จพระบรมราชินีใช้ พระแท่นบรรทม ครับ" },
+                3: { word: "เสวย", reading: "สะ - เหวย", prefix: "-", root: "เสวย", rule: "ห้ามใช้ 'ทรง' ซ้อน", sentence: "สมเด็จพระกนิษฐาธิราชเจ้าฯ **เสวย** พระกระยาหารกลางวัน", note: "ใช้ 'เสวย' โดยไม่ต้องมี 'ทรง' นำหน้า", hint: "ระดับพระบรมวงศานุวงศ์ก็ใช้ 'เสวย' โดยไม่ต้องใส่ ทรง ครับ" },
+                4: { word: "พระอัยกา", reading: "พระ - ไอ - ยะ - กา", prefix: "พระ", root: "อัยกา", rule: "เครือญาติราชาศัพท์", sentence: "พระองค์ทรงฉายพระรูปคู่กับ **พระอัยกา**", note: "ปู่ หรือ ตา ของพระบรมวงศานุวงศ์", hint: "ใช้ 'พระอัยกา' หมายถึงปู่หรือตาครับ" },
+                5: { word: "ข้าพระพุทธเจ้า / ใต้ฝ่าละอองพระบาท", reading: "ใต้ - ฝ่า - ละ - ออง - พระ - บาท", prefix: "สรรพนาม", root: "ชั้นสูง", rule: "ตัดคำว่า 'ธุลี' ออก", sentence: "**ข้าพระพุทธเจ้า** กราบบังคมทูล **ใต้ฝ่าละอองพระบาท**", note: "ข้อสังเกต: สรรพนามพูดกับพระบรมราชินีจะตัดคำว่า 'ธุลี' ออก เหลือแค่ 'ใต้ฝ่าละอองพระบาท'", hint: "สังเกตดีๆ นะ! สรรพนามพูดกับพระบรมราชินีจะตัดคำว่า 'ธุลี' ออกครับ" }
+            },
+            // Rank 3: พระอนุวงศ์
+            3: {
+                1: { word: "พระเศียร / เศียร", reading: "พระ - เสียร", prefix: "พระ / -", root: "เศียร", rule: "ลดระดับตามยศ", sentence: "พระองค์เจ้าทิพยสัมพันธ์ทรงลูบ **พระเศียร** พระโอรส", note: "หม่อมเจ้าอาจลดทอนคำนำหน้าลงตามลำดับยศ", hint: "พระอนุวงศ์ (พระองค์เจ้า/หม่อมเจ้า) ลดระดับคำนำหน้าลงตามยศครับ" },
+                2: { word: "เตียงบรรทม", reading: "เตียง - บัน - ทม", prefix: "-", root: "เตียงบรรทม", rule: "ลดคำว่า 'พระแท่น'", sentence: "หม่อมเจ้าเสด็จประทับบน **เตียงบรรทม**", note: "ระดับหม่อมเจ้าใช้ 'เตียงบรรทม' แทน 'พระแท่นบรรทม'", hint: "ระดับหม่อมเจ้าจะตัดคำว่า 'พระแท่น' เหลือเพียง 'เตียงบรรทม' ครับ" },
+                3: { word: "เสวย", reading: "สะ - เหวย", prefix: "-", root: "เสวย", rule: "กริยาราชาศัพท์", sentence: "พระองค์เจ้าเสด็จ **เสวย** พระสุธารส", note: "ยังคงใช้คำว่า 'เสวย' สำหรับกริยากิน/รับประทาน", hint: "พระอนุวงศ์ยังคงใช้กริยา 'เสวย' อยู่ครับ" },
+                4: { word: "พระอัยกา / อัยกา", reading: "พระ - ไอ - ยะ - กา", prefix: "พระ / -", root: "อัยกา", rule: "เครือญาติราชาศัพท์", sentence: "หม่อมเจ้าทรงระลึกถึง **พระอัยกา**", note: "ปู่ หรือ ตา ของพระอนุวงศ์", hint: "ใช้ 'พระอัยกา' หรือ 'อัยกา' ตามระดับยศครับ" },
+                5: { word: "เกล้ากระหม่อม / ฝ่าพระบาท", reading: "เกล้า - กระ - หม่อม", prefix: "สรรพนาม", root: "ระดับพระองค์เจ้า", rule: "เปลี่ยนตามชั้นยศ", sentence: "**เกล้ากระหม่อม** ขอทูล **ฝ่าพระบาท** (ใช้กับพระองค์เจ้า)", note: "ผู้พูดแทนตัวว่า 'เกล้ากระหม่อม' (ชาย) / 'เกล้ากระหม่อมฉัน' (หญิง)", hint: "กราบทูลพระองค์เจ้า ให้ใช้สรรพนามว่า 'ฝ่าพระบาท' ครับ" }
+            },
+            // Rank 4: พระสงฆ์
+            4: {
+                1: { word: "ศีรษะ", reading: "ศีร - สะ", prefix: "-", root: "ศีรษะ", rule: "คำสุภาพ", sentence: "พระภิกษุสงฆ์ปลง **ศีรษะ** (โกนผม) ในวันโกน", note: "พระสงฆ์ไม่ใช้คำว่า 'พระเศียร' ให้ใช้คำสุภาพว่า 'ศีรษะ'", hint: "จำไว้เลยนะ! พระสงฆ์ไม่ใช้คำว่า 'พระเศียร' แต่ให้ใช้ 'ศีรษะ' ครับ" },
+                2: { word: "เตียง / อาสนะ", reading: "เตียง / อา - สะ - นะ", prefix: "-", root: "เตียง", rule: "คำสุภาพสงฆ์", sentence: "พระภิกษุจำวัดบน **เตียง** ในกุฏิ", note: "พระสงฆ์ใช้คำสุภาพว่า 'เตียง' หรือ 'อาสนะ' สำหรับนั่ง/นอน", hint: "พระสงฆ์ใช้คำว่า เตียง หรือ อาสนะ ครับ" },
+                3: { word: "ฉัน", reading: "ฉัน", prefix: "-", root: "ฉัน", rule: "กริยาสงฆ์เฉพาะ", sentence: "พระสงฆ์กำลัง **ฉัน** ภัตตาหารเพล", note: "คำกริยาแสดงการกินของพระสงฆ์ใช้คำว่า 'ฉัน'", hint: "พระสงฆ์ใช้คำกริยา 'ฉัน' แทนการกินอาหารครับ" },
+                4: { word: "โยมปู่ / โยมตา", reading: "โยม - ปู่", prefix: "โยม", root: "ปู่ / ตา", rule: "คำเรียกญาติสงฆ์", sentence: "พระสงฆ์สนทนากับ **โยมปู่** ที่มาทำบุญ", note: "พระสงฆ์เติมคำว่า 'โยม' นำหน้าคำเรียกญาติโยม", hint: "พระสงฆ์จะเติมคำว่า 'โยม' นำหน้าคำว่า ปู่ หรือ ตา ครับ" },
+                5: { word: "อาตมา / พระคุณเจ้า", reading: "อา - ตะ - มา", prefix: "-", root: "อาตมา", rule: "สรรพนามสงฆ์", sentence: "**อาตมา** ขอเจริญพรขอบใจ **โยม** ทุกท่าน", note: "พระสงฆ์แทนตนเองว่า 'อาตมา' และเรียกผู้ฟังว่า 'โยม' หรือ 'พระคุณเจ้า' (เมื่อพูดกับพระด้วยกัน)", hint: "พระสงฆ์ใช้สรรพนามแทนตนเองว่า 'อาตมา' ครับ" }
+            },
+            // Rank 5: สุภาพชน
+            5: {
+                1: { word: "ศีรษะ", reading: "ศีร - สะ", prefix: "-", root: "ศีรษะ", rule: "ภาษาสุภาพ", sentence: "คุณครูเตือนให้นักเรียนสระ **ศีรษะ** ให้สะอาด", note: "บุคคลทั่วไปใช้ภาษาระดับสุภาพว่า 'ศีรษะ' (ภาษาพูดใช้ 'หัว')", hint: "สุภาพชนใช้ภาษาเขียนสุภาพว่า 'ศีรษะ' ครับ" },
+                2: { word: "เตียงนอน", reading: "เตียง - นอน", prefix: "-", root: "เตียงนอน", rule: "ภาษาเขียนสุภาพ", sentence: "เขานอนพักผ่อนบน **เตียงนอน**", note: "คำสามัญภาษาเขียนสุภาพทั่วไป", hint: "ใช้คำสามัญสุภาพว่า เตียงนอน ครับ" },
+                3: { word: "รับประทาน / กิน", reading: "รับ - ประ - ทาน", prefix: "-", root: "รับประทาน", rule: "ภาษาสุภาพ", sentence: "ครอบครัวของเรา **รับประทาน** อาหารพร้อมหน้ากัน", note: "ภาษากิจการงานใช้ 'รับประทาน' ภาษาพูดทั่วไปใช้ 'กิน'", hint: "ภาษาเขียนสุภาพใช้ 'รับประทาน' ครับ" },
+                4: { word: "คุณปู่ / คุณตา", reading: "คุณ - ปู่", prefix: "คุณ", root: "ปู่ / ตา", rule: "ภาษาสุภาพ", sentence: "ฉันไปเยี่ยม **คุณปู่** และ **คุณตา** ในช่วงปิดเทอม", note: "เติมคำว่า 'คุณ' นำหน้าเพื่อความสุภาพ", hint: "เติมคำว่า 'คุณ' เพื่อแสดงความสุภาพครับ" },
+                5: { word: "กระผม / ดิฉัน / คุณ", reading: "กระ - ผม / ดิ - ฉัน", prefix: "-", root: "กระผม", rule: "ภาษาสุภาพทั่วไป", sentence: "**กระผม / ดิฉัน** ขอเรียนให้ **คุณ** ทราบ", note: "คำบุรุษสรรพนามสุภาพทั่วไปในสังคม", hint: "สุภาพชนใช้ กระผม / ดิฉัน / คุณ ในการสื่อสารทั่วไปครับ" }
+            }
+        };
+
+        // Quiz Questions Data (5 Objective Questions for Grade 8)
+        const quizQuestions = [
+            {
+                id: 1,
+                question: "1. หากนักเรียนต้องการเขียนรายงานกล่าวถึง 'การกินอาหาร' ของ 'พระบาทสมเด็จพระเจ้าอยู่หัว' ข้อใดใช้คำราชาศัพท์ได้ถูกต้องตามหลักภาษาไทย ม.2?",
+                options: [
+                    "ก. ทรงเสวยพระกระยาหาร",
+                    "ข. เสวยพระกระยาหาร",
+                    "ค. ทรงรับประทานอาหาร",
+                    "ง. ฉันพระกระยาหาร"
+                ],
+                answer: 1,
+                explain: "คำว่า 'เสวย' เป็นกริยาราชาศัพท์ในตัวเองอยู่แล้ว ตามหลักภาษาไทยห้ามใช้ 'ทรง' นำหน้าคำกริยาราชาศัพท์ซ้ำซ้อน ดังนั้นข้อที่ถูกต้องคือ 'เสวยพระกระยาหาร' (ห้ามใช้ ทรงเสวย)"
+            },
+            {
+                id: 2,
+                question: "2. ข้อใดจับคู่ระหว่าง 'ระดับบุคคล' และ 'คำสรรพนามแทนตัวผู้พูด (บุรุษสรรพนามที่ 1)' ได้ถูกต้องตามหลักการใช้คำราชาศัพท์?",
+                options: [
+                    "ก. พูดกับพระมหากษัตริย์ -> ใช้ 'เกล้ากระหม่อม'",
+                    "ข. พูดกับสมเด็จพระบรมราชินี -> ใช้ 'ข้าพระพุทธเจ้า'",
+                    "ค. พูดกับพระภิกษุสงฆ์ -> ใช้ 'อาตมา'",
+                    "ง. พระสงฆ์พูดกับบุคคลทั่วไป -> ใช้ 'ข้าพเจ้า'"
+                ],
+                answer: 1,
+                explain: "เมื่อพูดกับสมเด็จพระบรมราชินี หรือ พระมหากษัตริย์ สรรพนามแทนตัวผู้พูดที่ถูกต้องคือ 'ข้าพระพุทธเจ้า' (ส่วน 'เกล้ากระหม่อม' ใช้กับพระองค์เจ้า และ 'อาตมา' เป็นคำที่พระสงฆ์ใช้เรียกตนเอง)"
+            },
+            {
+                id: 3,
+                question: "3. คำราชาศัพท์หมวดร่างกายข้อใด ใช้สำหรับ 'พระมหากษัตริย์' หมายถึง 'ศีรษะ'?",
+                options: [
+                    "ก. พระหัตถ์",
+                    "ข. พระนาสิก",
+                    "ค. พระเศียร",
+                    "ง. พระบาท"
+                ],
+                answer: 2,
+                explain: "'พระเศียร' หมายถึง ศีรษะ (ส่วน พระหัตถ์ = มือ, พระนาสิก = จมูก, พระบาท = เท้า)"
+            },
+            {
+                id: 4,
+                question: "4. หลักการใช้คำนำหน้า 'ทรง' ข้อใดถูกต้องที่สุด?",
+                options: [
+                    "ก. ใช้นำหน้าคำกริยาราชาศัพท์แท้ เช่น ทรงเสวย, ทรงโปรด",
+                    "ข. ใช้นำหน้าคำนามสามัญหรือกริยาสามัญเพื่อแปลงเป็นราชาศัพท์ เช่น ทรงดนตรี, ทรงฟัง",
+                    "ค. ใช้นำหน้าคำสรรพนามได้ทุกคำ",
+                    "ง. ใช้นำหน้าคำว่า 'พระบรมราชโองการ'"
+                ],
+                answer: 1,
+                explain: "หลักการใช้ 'ทรง': ใช้นำหน้าคำนามสามัญหรือกริยาสามัญเพื่อสร้างคำกริยาราชาศัพท์ (เช่น ทรงดนตรี, ทรงฟัง, ทรงยินดี) และ **ห้าม** นำหน้าคำกริยาราชาศัพท์แท้ เช่น เสวย, โปรด, กริ้ว"
+            },
+            {
+                id: 5,
+                question: "5. หากต้องการกล่าวถึงการ 'นอนพักผ่อน' ของ 'พระภิกษุสงฆ์' ควรเลือกใช้คำกริยาสงฆ์ในข้อใด?",
+                options: [
+                    "ก. บรรทม",
+                    "ข. สรงน้ำ",
+                    "ค. จำวัด",
+                    "ง. จำพรรษา"
+                ],
+                answer: 2,
+                explain: "พระภิกษุสงฆ์ใช้คำว่า 'จำวัด' หมายถึง นอนหลับหรือพักผ่อน (บรรทม = กษัตริย์/เจ้านาย, จำพรรษา = การอยู่ประจำวัดตลอด 3 เดือนในฤดูฝน)"
+            }
+        ];
+
+        let userAnswers = {};
+
+        // Update Dashboard Real-time
+        function updateDashboard() {
+            const rankVal = document.getElementById('slider-rank').value;
+            const catVal = document.getElementById('slider-category').value;
+
+            const rank = rankData[rankVal];
+            const cat = categoryData[catVal];
+            const wordInfo = vocabMatrix[rankVal][catVal];
+
+            // Update Badges
+            document.getElementById('rank-badge').innerText = `ระดับ ${rankVal}`;
+            document.getElementById('category-badge').innerText = `หมวด ${catVal}`;
+
+            // Update Info Boxes
+            document.getElementById('rank-title').innerText = rank.name;
+            document.getElementById('rank-desc').innerText = rank.desc;
+            document.getElementById('rank-icon').className = `fa-solid ${rank.icon}`;
+            document.getElementById('rank-icon-bg').className = `w-12 h-12 rounded-2xl text-white flex items-center justify-center text-xl shadow-md shrink-0 ${rank.color}`;
+
+            document.getElementById('cat-title').innerText = cat.name;
+            document.getElementById('cat-desc').innerText = cat.desc;
+            document.getElementById('cat-icon').className = `fa-solid ${cat.icon}`;
+
+            // Update Formality Gauge
+            document.getElementById('gauge-bar').style.width = `${rank.formality}%`;
+            document.getElementById('gauge-percent-text').innerText = `${rank.formality}%`;
+
+            // Mascot Speech Hint Update
+            document.getElementById('mascot-hint-text').innerText = wordInfo.hint;
+
+            // Update Main Card Pulse
+            const vocabCard = document.getElementById('main-vocab-card');
+            vocabCard.classList.remove('pulse-card');
+            void vocabCard.offsetWidth; // Trigger reflow
+            vocabCard.classList.add('pulse-card');
+
+            document.getElementById('target-concept-tag').innerText = `คำสามัญ: ${cat.concept}`;
+            document.getElementById('royal-word-text').innerText = wordInfo.word;
+            document.getElementById('phonetic-text').innerText = `[คำอ่าน: ${wordInfo.reading}]`;
+
+            // Structure Breakdown
+            document.getElementById('struct-prefix').innerText = wordInfo.prefix;
+            document.getElementById('struct-root').innerText = wordInfo.root;
+            document.getElementById('struct-rule').innerText = wordInfo.rule;
+
+            // Sentence & Note
+            document.getElementById('sentence-example').innerHTML = wordInfo.sentence.replace(/\*\*(.*?)\*\*/g, '<span class="text-amber-800 font-bold bg-amber-200 px-2 py-0.5 rounded-lg border border-amber-300">$1</span>');
+            document.getElementById('analysis-note').innerText = wordInfo.note;
+
+            // Comparison Table
+            renderComparisonTable(catVal, rankVal);
+        }
+
+        function renderComparisonTable(currentCat, activeRank) {
+            const tbody = document.getElementById('comparison-table-body');
+            tbody.innerHTML = '';
+
+            for (let r = 1; r <= 5; r++) {
+                const item = vocabMatrix[r][currentCat];
+                const rData = rankData[r];
+                const isActive = (parseInt(activeRank) === r);
+
+                const tr = document.createElement('tr');
+                tr.className = isActive 
+                    ? 'bg-amber-100/90 font-bold text-amber-950 border-l-4 border-amber-500 transition-all' 
+                    : 'hover:bg-slate-50 text-slate-700';
+
+                tr.innerHTML = `
+                    <td class="p-3 flex items-center gap-2">
+                        <i class="fa-solid ${rData.icon} ${isActive ? 'text-amber-600' : 'text-slate-400'} text-xs"></i>
+                        <span>${rData.short}</span>
+                    </td>
+                    <td class="p-3 ${isActive ? 'text-amber-800 font-bold text-sm font-mali' : ''}">${item.word}</td>
+                    <td class="p-3 text-[11px] text-slate-500">${item.rule}</td>
+                `;
+                tbody.appendChild(tr);
+            }
+        }
+
+        // Text-to-Speech
+        function speakWord() {
+            const word = document.getElementById('royal-word-text').innerText;
+            if ('speechSynthesis' in window) {
+                window.speechSynthesis.cancel();
+                const utterance = new SpeechSynthesisUtterance(word);
+                utterance.lang = 'th-TH';
+                utterance.rate = 0.85;
+                window.speechSynthesis.speak(utterance);
+            } else {
+                alert(`ออกเสียงคำว่า: "${word}"`);
+            }
+        }
+
+        // Tab Switcher
+        function switchTab(tabName) {
+            const learnSection = document.getElementById('section-learn');
+            const quizSection = document.getElementById('section-quiz');
+            const btnLearn = document.getElementById('btn-tab-learn');
+            const btnQuiz = document.getElementById('btn-tab-quiz');
+
+            if (tabName === 'learn') {
+                learnSection.classList.remove('hidden');
+                quizSection.classList.add('hidden');
+                btnLearn.className = "px-5 py-2.5 rounded-xl bg-amber-500 text-white font-bold font-mali shadow-md transition-all duration-200 flex items-center gap-2";
+                btnQuiz.className = "px-5 py-2.5 rounded-xl text-slate-700 font-bold font-mali hover:bg-white/60 transition-all duration-200 flex items-center gap-2";
+            } else {
+                learnSection.classList.add('hidden');
+                quizSection.classList.remove('hidden');
+                btnQuiz.className = "px-5 py-2.5 rounded-xl bg-amber-500 text-white font-bold font-mali shadow-md transition-all duration-200 flex items-center gap-2";
+                btnLearn.className = "px-5 py-2.5 rounded-xl text-slate-700 font-bold font-mali hover:bg-white/60 transition-all duration-200 flex items-center gap-2";
+            }
+        }
+
+        // Quiz Logic
+        function renderQuiz() {
+            const container = document.getElementById('questions-container');
+            container.innerHTML = '';
+
+            quizQuestions.forEach((q) => {
+                const qCard = document.createElement('div');
+                qCard.className = "cute-card p-6 border-slate-200 space-y-4";
+                qCard.id = `q-card-${q.id}`;
+
+                let optionsHTML = '';
+                q.options.forEach((opt, optIdx) => {
+                    optionsHTML += `
+                        <label class="flex items-center space-x-3 p-3.5 rounded-2xl border-2 border-slate-100 hover:border-amber-300 hover:bg-amber-50/50 cursor-pointer transition-all text-xs md:text-sm font-medium">
+                            <input type="radio" name="question-${q.id}" value="${optIdx}" onchange="selectAnswer(${q.id}, ${optIdx})" class="w-4 h-4 text-amber-600 focus:ring-amber-500">
+                            <span class="text-slate-800">${opt}</span>
+                        </label>
+                    `;
+                });
+
+                qCard.innerHTML = `
+                    <div class="font-bold text-slate-800 text-sm md:text-base font-mali leading-snug">
+                        ${q.question}
+                    </div>
+                    <div class="space-y-2">
+                        ${optionsHTML}
+                    </div>
+                    <div id="feedback-${q.id}" class="hidden mt-4 p-4 rounded-2xl text-xs space-y-1"></div>
+                `;
+
+                container.appendChild(qCard);
+            });
+        }
+
+        function selectAnswer(questionId, optionIndex) {
+            userAnswers[questionId] = optionIndex;
+        }
+
+        function submitQuiz() {
+            let score = 0;
+
+            quizQuestions.forEach((q) => {
+                const userAns = userAnswers[q.id];
+                const feedbackBox = document.getElementById(`feedback-${q.id}`);
+
+                feedbackBox.classList.remove('hidden', 'bg-emerald-50', 'border-emerald-300', 'text-emerald-900', 'bg-rose-50', 'border-rose-300', 'text-rose-900', 'bg-amber-50', 'border-amber-300', 'text-amber-900');
+
+                if (userAns === undefined) {
+                    feedbackBox.className = "mt-4 p-4 rounded-2xl text-xs bg-amber-50 border-2 border-amber-300 text-amber-900 font-medium";
+                    feedbackBox.innerHTML = `
+                        <div class="font-bold font-mali text-amber-800 mb-1"><i class="fa-solid fa-triangle-exclamation mr-1"></i> ยังไม่ได้เลือกคำตอบ</div>
+                        <div><strong>เฉลยที่ถูกต้อง:</strong> ${q.options[q.answer]}</div>
+                        <div class="mt-1 text-slate-600"><strong>คำอธิบาย:</strong> ${q.explain}</div>
+                    `;
+                } else if (userAns === q.answer) {
+                    score++;
+                    feedbackBox.className = "mt-4 p-4 rounded-2xl text-xs bg-emerald-50 border-2 border-emerald-300 text-emerald-900 font-medium";
+                    feedbackBox.innerHTML = `
+                        <div class="font-bold font-mali text-emerald-700 mb-1"><i class="fa-solid fa-circle-check mr-1"></i> ถูกต้องเก่งมาก! (+1 คะแนน)</div>
+                        <div><strong>คำอธิบายเฉลย:</strong> ${q.explain}</div>
+                    `;
+                } else {
+                    feedbackBox.className = "mt-4 p-4 rounded-2xl text-xs bg-rose-50 border-2 border-rose-300 text-rose-900 font-medium";
+                    feedbackBox.innerHTML = `
+                        <div class="font-bold font-mali text-rose-700 mb-1"><i class="fa-solid fa-circle-xmark mr-1"></i> ยังไม่ถูกต้อง</div>
+                        <div class="font-bold text-slate-800">คำตอบที่ถูกต้องคือ: ${q.options[q.answer]}</div>
+                        <div class="mt-1 text-slate-600"><strong>คำอธิบายเฉลย:</strong> ${q.explain}</div>
+                    `;
+                }
+            });
+
+            document.getElementById('score-display').innerText = `${score} / 5`;
+
+            const resultCard = document.getElementById('quiz-result-card');
+            const resultTitle = document.getElementById('result-title');
+            const resultFeedback = document.getElementById('result-feedback');
+            const resultIcon = document.getElementById('result-icon');
+            const resultIconBg = document.getElementById('result-icon-bg');
+
+            resultCard.classList.remove('hidden');
+
+            if (score === 5) {
+                resultTitle.innerText = "สุดยอดไปเลย! ได้คะแนนเต็ม 5/5 ⭐";
+                resultFeedback.innerText = "นักเรียนสังเกตและวิเคราะห์โครงสร้างคำราชาศัพท์ ม.2 ได้อย่างแม่นยำสมบูรณ์แบบครับ!";
+                resultIcon.className = "fa-solid fa-trophy";
+                resultIconBg.className = "w-16 h-16 rounded-2xl bg-amber-500 text-white flex items-center justify-center text-3xl shadow-lg shrink-0";
+            } else if (score >= 3) {
+                resultTitle.innerText = `ผ่านเกณฑ์ประเมิน! ได้คะแนน ${score}/5 🌸`;
+                resultFeedback.innerText = "ทำได้ดีมากครับ! ลองกลับไปทบทวนข้อสังเกตในห้องเรียนโต้ตอบเพื่อเก็บคะแนนเต็มในครั้งหน้านะครับ";
+                resultIcon.className = "fa-solid fa-star";
+                resultIconBg.className = "w-16 h-16 rounded-2xl bg-teal-500 text-white flex items-center justify-center text-3xl shadow-lg shrink-0";
+            } else {
+                resultTitle.innerText = `ได้คะแนน ${score}/5 พยายามอีกนิดนะ! 💪`;
+                resultFeedback.innerText = "ลองกลับไปทดลองปรับเลื่อน Slider ในห้องเรียนโต้ตอบ สังเกตการใช้ 'ทรง' และ 'พระ' แล้วมาทดสอบอีกครั้งนะครับ";
+                resultIcon.className = "fa-solid fa-seedling";
+                resultIconBg.className = "w-16 h-16 rounded-2xl bg-purple-500 text-white flex items-center justify-center text-3xl shadow-lg shrink-0";
+            }
+
+            resultCard.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function resetQuiz() {
+            userAnswers = {};
+            document.getElementById('quiz-form').reset();
+            document.getElementById('score-display').innerText = "0 / 5";
+            document.getElementById('quiz-result-card').classList.add('hidden');
+            renderQuiz();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Initialize on Window Load
+        window.onload = function() {
+            updateDashboard();
+            renderQuiz();
+        };
+    </script>
+</body>
+</html>
